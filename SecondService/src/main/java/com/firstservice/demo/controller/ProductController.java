@@ -8,8 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/consumer")
 public class ProductController {
 
+    @Value("${message}")
+    String message;
+
     @GetMapping("/message")
     public String test() {
-        return "Hello JavaInUse Called in Second Service";
+        return message;
     }
 }
