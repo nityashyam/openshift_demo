@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: customerModule
+          uri: http://customer-service:8080/
+          predicates:
+            - Path=/customer/**
+
+
